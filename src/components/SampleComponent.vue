@@ -15,13 +15,14 @@ export default {
 }
 </script>
 
-<style scoped>
-/* purgecss start ignore */
+<style lang="scss">
+
+@import 'src/assets/_variables.scss';
+
 .sample-component-container {
   padding: 40px;
   background-color: black;
-  color: white;
+  color: $primary-color;
 }
-/* purgecss end ignore */
 
 </style>

@@ -23,8 +23,8 @@ export default {
       sourcemap: true
     }
   ],
-  plugins: [   vue({ css: false }), postcss({
-    extract: true,
+  plugins: [ vue({ preprocessStyles: true }), postcss({
+    extract: false,
     plugins: [
         autoprefixer(),
         tailwind(),
@@ -33,5 +33,8 @@ export default {
             defaultExtractor: content => content.match(/[\w-./:]+(?<!:)/g) || []
         }),
     ]
-}), commonjs()]
+  }), commonjs()]
 };
+
+
+
